@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- user icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <title>CBoard - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-dkdn.css">
+</head>
+
+<body>
+    <div class="backgroundBlack"></div>
+
+    <header class="containerfull bgp menu-fixed">
+        <div class="container">
+            <div class="menu">
+                <div class="logo">
+                    <a href="index.html" target="_self" rel="noopener noreferrer"><img src="images/home/logo.png"
+                            alt=""></a>
+                </div>
+                <div class="menucon">
+                    <ul>
+                        <li><a href="item-keyboard.html" onmouseover="inhover_menu(this)"
+                                onmouseout="outhover_menu(this)">BÀN PHÍM</a></li>
+                        <li><a href="giohang.html" onmouseover="inhover_menu(this)" onmouseout="outhover_menu(this)">THANH TOÁN</a></li>
+                        <li><a href="#chuyentoitintuc" onmouseover="inhover_menu(this)" onmouseout="outhover_menu(this)">TIN TỨC</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="luachon">
+                    <a href="javascript:formdndk();" id="userlog" onmouseover="inhover_menu(this)"
+                        onmouseout="outhover_menu(this)"><i class="fa fa-user"></i></a>
+                    <a href="clickhere.mp4" target="_blank" onmouseover="inhover_menu(this)"  onmouseout="outhover_menu(this)"><i class="fa fa-search"></i></a>                   
+                    <a href="javascript:showgiohangmini()" onmouseover="inhover_menu(this)" onmouseout="outhover_menu(this)"><i class="fa fa-cart-arrow-down"></i></a>   
+                    <span id="giohang-count">0</span>
+                </div>
+                
+        
+                <div class="giohangmini">
+                    <table>
+                        <tr>
+                            <th>Ảnh</th>
+                            <th>Sản Phẩm</th>
+                            <th>Số Lượng</th>
+                            <th>Tạm Tính</th>
+                            <th>Xóa</th>
+                        </tr>
+                        <tbody id="mycart">
+                            <tr>
+                                <td><img src="images/home/cum.webp" alt="" srcset=""></td>
+                                <td>Giỏ hàng đang trống</td>
+                                <td>trống</td>
+                                <td>trống</td>
+                                <td><button onclick="xoasp(this)" class="xoa"><i class="fa fa-trash-o"></i></button></td>
+                            </tr>
+                        </tbody> 
+                    </table>
+                    <a href="giohang.html">THANH TOÁN</a>
+                    <button onclick="xoatatca()" id="xoaall"><i class="fa fa-trash-o" style="font-size: 20px;"></i> Tất Cả</button>
+                </div>    
+            </div>
+        </div>
+    </header>
+    <section class="containerfull" style="padding-top: 70px;">
+        <div class="banner-slider">
+            <img src="images/home/banner_slider/0.jpg" alt="" id="slideshow">
+            <div class="banner-slide-button" id="button-slider" onmouseover="hienbttsld(this)"
+                onmouseout="anbttsld(this)">
+                <button onclick="first()" id="b0" style="border: 3px solid #6e739c"></button>
+                <button onclick="slide23(1)" id="b1"></button>
+                <button onclick="slide23(2)" id="b2"></button>
+                <button onclick="last()" id="b3"></button>
+                <button onclick="next()" id="nextsld"><i class="fa fa-chevron-right"></i></button>
+                <button onclick="prev()" id="prevsld"><i class="fa fa-chevron-left"></i></button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="form">
+                <div class="loginThanhcong">
+                    <img src="images/home/check-512.webp" alt="">
+                    <h1>ĐĂNG NHẬP THÀNH CÔNG!</h1>
+                    <button onclick="javascript:location.reload();">OK</button>
+                </div>
+                <div class="formlogin">
+                    <h1>ĐĂNG NHẬP VÀO TÀI KHOẢN</h1>
+                    <form style="margin-top: 50px;" id="dangnhapForm">
+                        <input type="text" placeholder="USERNAME...">
+                        <div class="boxthongbao">d</div>
+                        <input type="password" placeholder="MẬT KHẨU...">
+                        <div class="boxthongbao">d</div>
+                        <input type="button" value="ĐĂNG NHẬP" onclick="submitlogin()">
+                    </form>
+                    <br>
+                    <p style="color:gray">Quên mật khẩu? <a href="http://" target="_blank" style="color: #7e85bb;">Bấm
+                            vào đây!</a></p>
+                </div>
+                <div class="formregister" id="dangkyForm">
+                    <button id="form-exit" onclick="formexit()">X</button>
+                    <h1>HOẶC ĐĂNG KÝ NẾU BẠN CHƯA
+                        <br> CÓ TÀI KHOẢN
+                    </h1>
+                    <form action="">
+                        <input type="text" placeholder="USERNAME...">
+                        <div class="boxthongbao">d</div>
+                        <input type="text" name="" placeholder="SỐ ĐIỆN THOẠI..." id="mobile">
+                        <div class="boxthongbao">d</div>
+                        <input type="password" placeholder="MẬT KHẨU...">
+                        <div class="boxthongbao">d</div>
+                        <input type="password" placeholder="NHẬP LẠI MẬT KHẨU...">
+                        <div class="boxthongbao">d</div>
+                        <input type="button" value="ĐĂNG KÝ" onclick="submitregister()">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="containerfull mgt40">
+        <div class="container">
+            <div class="box4">
+                <h1>SẢN PHẨM BÁN CHẠY</h1>
+                
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/item_ban_chay/ban-phim-co-akko-3068b-plus-world-tour-tokyo-r2-001-800x800.jpg"class="box4-child-img-img">                         
+                    </div>
+                    <p class="box4-child-item_name">AKKO 3068B PLUS <br> WORLD TOUR TOKYO R2</p>
+                    <p class="box4-child-item_price">1.890.000₫</p>
+                    <p style="display: none;">1890000</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham4.html" target="_blank"><button onclick="">Thông Tin</button></a>
+                </div>
+
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/item_ban_chay/9c2b73af8e0b09d5bbe165235e9d6fda.jpg"
+                            class="box4-child-img-img w200px">
+                    </div>
+                    <p class="box4-child-item_name">Keycap CORAL SEA <br> XDA Profile</p>
+                    <p class="box4-child-item_price">490.000₫</p>
+                    <p style="display: none;">490000</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham5.html" target="_blank"><button onclick="">Thông Tin</button></a>
+                </div>
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/switch/20cdf33b32886386183f2ab7ebf49f9c.png_720x720q80.jpg"
+                            class="box4-child-img-img w180px">
+                    </div>
+                    <p class="box4-child-item_name">Gateron Milky <br> Yellow Pro</p>
+                    <p class="box4-child-item_price">3.290₫</p>
+                    <p style="display: none;">3290</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham6.html" target="_blank"><button onclick="">Thông Tin</button></a>
+                </div>
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/item_ban_chay/rk h81.png" class="box4-child-img-img">
+                    </div>
+                    <p class="box4-child-item_name">Royal Kludge H81 <br> 3 Mode RGB</p>
+                    <p class="box4-child-item_price">1.290.000₫</p>
+                    <p style="display: none;">1290000</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham7.html" target="_blank"><button onclick="">Thông Tin</button></a>
+                </div>
+            </div>
+            <div class="box4">
+                <div class="arrow">
+                    <img src="images/home/arrow.png" alt="" srcset="">
+                    <span>BÀN PHÍM</span>
+                </div>
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/keyboard/ban-phim-co-akko-3084b-plus-world-tour-tokyo-r2-osa-01-247x296.jpg"
+                            class="box4-child-img-img">
+                    </div>
+                    <p class="box4-child-item_name">AKKO 3084B PLUS <br> WORLD TOUR TOKYO R2</p>
+                    <p class="box4-child-item_price">2.199.000₫</p>
+                    <p style="display: none;">2199000</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham.html" target="_blank"><button onclick="">Thông Tin</button></a>
+                </div>
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/keyboard/ban-phim-co-akko-3068b-multi-modes-black-pink-ava3-247x296.jpg"
+                            class="box4-child-img-img">
+                    </div>
+                    <p class="box4-child-item_name">AKKO 3068B Black & Pink <br> Hotswap</p>
+                    <p class="box4-child-item_price">2.099.000₫</p>
+                    <p style="display: none;">2099000</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham2.html" target="_blank"><button onclick="">Thông Tin</button></a>
+
+                </div>
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/keyboard/ban-phim-co-akko-5075b-plus-dragon-ball-super-goku-01-247x296.jpg"
+                            class="box4-child-img-img">
+                    </div>
+                    <p class="box4-child-item_name">AKKO 5075B Plus <br> Dragon Ball Super – Goku</p>
+                    <p class="box4-child-item_price">2.900.000₫</p>
+                    <p style="display: none;">2900000</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham1.html" target="_blank"><button onclick="">Thông Tin</button></a>
+
+                </div>
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/keyboard/ban-phim-co-akko-3068b-plus-prunus-lannesiana-01-247x296.jpg"
+                            class="box4-child-img-img">
+                    </div>
+                    <p class="box4-child-item_name">AKKO 3068B Plus Prunus <br> Lannesiana</p>
+                    <p class="box4-child-item_price">1.900.000₫</p>
+                    <p style="display: none;">1900000</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham3.html" target="_blank"><button onclick="">Thông Tin</button></a>
+
+                </div>
+            </div>
+
+            <div class="box4 mgt40">
+                <div class="arrow">
+                    <img src="images/home/arrow.png" alt="" srcset=""
+                        style="transform: rotate(180deg);position: relative;left:750px">
+                    <span style="left:535px">KEYCAP PBT</span>
+                </div>
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/keycap/Milk-Keycaps-Milk-Cover-Keycap-PBT-Sublimation-Key-Cap-Cherry-Profile-140-Keys-Compatible-87-104.jpg_Q90.jpg_.webp"
+                            class="box4-child-img-img">
+                    </div>
+                    <p class="box4-child-item_name">Keycap Milk Cover<br>Cherry Profile</p>
+                    <p class="box4-child-item_price">559.000₫</p>
+                    <p style="display: none;">559000</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham8.html" target="_blank"><button onclick="">Thông Tin</button></a>
+                </div>
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/item_ban_chay/9c2b73af8e0b09d5bbe165235e9d6fda.jpg"
+                            class="box4-child-img-img w200px">
+                    </div>
+                    <p class="box4-child-item_name">Keycap CORAL SEA <br> XDA Profile</p>
+                    <p class="box4-child-item_price">490.000₫</p>
+                    <p style="display: none;">490000</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham5.html" target="_blank"><button onclick="">Thông Tin</button></a>
+                </div>
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/keycap/1set-Game-keycap-PBT-Sublimation-Key-Cap-Cherry-Profile-Compatible-84-87-104-108-84-64.jpg"
+                            class="box4-child-img-img">
+                    </div>
+                    <p class="box4-child-item_name">Keycap Milk Cover 114 key <br>Cherry Profile</p>
+                    <p class="box4-child-item_price">690.000₫</p>
+                    <p style="display: none;">690000</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham9.html" target="_blank"><button onclick="">Thông Tin</button></a>
+                </div>
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/keycap/akko-asa-shine-through-keycap-set-white-05-711x800.jpg"
+                            class="box4-child-img-img">
+                    </div>
+                    <p class="box4-child-item_name">Keycap Akko Shine<br>ASA profile</p>
+                    <p class="box4-child-item_price">599.000₫</p>
+                    <p style="display: none;">599000</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham10.html" target="_blank"><button onclick="">Thông Tin</button></a>
+                </div>
+            </div>
+
+            <div class="box4 mgt40">
+                <div class="arrow">
+                    <img src="images/home/arrow.png" alt="" srcset="">
+                    <span style="left:-260px;top:-32px">SWITCH</span>
+                </div>
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/switch/20cdf33b32886386183f2ab7ebf49f9c.png_720x720q80.jpg"
+                            class="box4-child-img-img w180px">
+                    </div>
+                    <p class="box4-child-item_name">Gateron Milky <br> Yellow Pro</p>
+                    <p class="box4-child-item_price">3.290₫</p>
+                    <p style="display: none;">3290</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham6.html" target="_blank"><button onclick="">Thông Tin</button></a>
+                </div>
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/switch/a811994863558f3ceb1a8ff634042350.jpg_720x720q80.jpg_.png"
+                            class="box4-child-img-img w180px">
+                    </div>
+                    <p class="box4-child-item_name">TTC TIGER<br>OG</p>
+                    <p class="box4-child-item_price">80.000₫</p>
+                    <p style="display: none;">80000</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham11.html" target="_blank"><button onclick="">Thông Tin</button></a>
+                </div>
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/switch/1b759e0bc3e903beec12bbdf853c6fb7.jpg_720x720q80.jpg_.png"
+                            class="box4-child-img-img w180px">
+                    </div>
+                    <p class="box4-child-item_name">Fantasy <br> Virus</p>
+                    <p class="box4-child-item_price">3.490₫</p>
+                    <p style="display: none;">3490</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham12.html" target="_blank"><button onclick="">Thông Tin</button></a>
+                </div>
+                <div class="box4-child" onmouseover="inhover_box4(this)" onmouseout="outhover_box4(this)">
+                    <div class="box4-child-img">
+                        <img src="images/home/switch/1c6c4dd5aebbc7f41ad584ece2e1b215.jpg_720x720q80.jpg_.png"
+                            class="box4-child-img-img w180px">
+                    </div>
+                    <p class="box4-child-item_name">KTT KangWhite <br> V3</p>
+                    <p class="box4-child-item_price">2.499₫</p>
+                    <p style="display: none;">2499</p>
+                    <button onclick="javascript:addcart(this);"><i class="fa fa-cart-arrow-down"></i> Thêm</button>
+                    <a href="chitietsanpham13.html" target="_blank"><button onclick="">Thông Tin</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="containerfull mgt40">
+        <div class="banner" id="banner2"></div>
+    </section>
+
+    <section class="containerfull mgt40" id="chuyentoitintuc">
+        <div class="container">
+            <div class="box3" >
+                <h1>TIN TỨC</h1>
+                <div class="box3-child">
+                    <div class="box3-child-img" id="news1"></div>
+                    <a href="https://keychron.vn/keychron-ban-phim-toi-uu-cho-macos/#:~:text=Keychron%20l%C3%A0%20b%C3%A0n%20ph%C3%ADm%20c%C6%A1%20c%C3%B3%20layouts%20cho%20macOS%20ho%C3%A0n%20h%E1%BA%A3o%20nh%E1%BA%A5t&text=%C4%90i%E1%BB%83n%20h%C3%ACnh%20l%C3%A0%20Keychron%20K2,v%E1%BB%9Bi%20h%E1%BB%87%20th%E1%BB%91ng%20ph%C3%ADm%20Macbook."
+                        target="_blank" rel="noopener noreferrer">
+                        <h2>Keychron – Bàn phím tối ưu <br> cho macOS</h2>
+                    </a>
+                    <p>Keychron – thương hiệu bàn phím cơ không dây có tuổi đời còn khá non trẻ trên thị trường [...]
+                    </p>
+                </div>
+                <div class="box3-child">
+                    <div class="box3-child-img" id="news2"></div>
+                    <a href="clickhere.mp4" target="_blank"
+                        rel="noopener noreferrer">
+                        <h2>Top 5 chiếc bàn phím phù hợp cho góc làm việc tối giản</h2>
+                    </a>
+                    <p>Bài viết này CBoard sẽ giới thiệu với các bạn 5 chiếc bàn phím cơ phù hợp cho góc setup tối [...]
+                    </p>
+                </div>
+                <div class="box3-child">
+                    <div class="box3-child-img" id="news3"></div>
+                    <a href="https://akko.vn/mo-hop-chuot-akko-x-hamster-wireless-chinh-hang/" target="_blank"
+                        rel="noopener noreferrer">
+                        <h2>Mở hộp chuột Akko X Hamster Wireless chính hãng</h2>
+                    </a>
+                    <p>Chú chuột Akko Hamster dễ thương đang làm mưa làm gió trên các diễn đàn trong những [...]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="containerfull bggr mgt40">
+        <div class="container">
+            <div class="footer-box4">
+                <div class="footer-box4-child" style="width: 20%;margin-right: 40px;">
+                    <h1>CBOARD</h1>
+                    <ul>
+
+                        <li style="line-height: 25px;margin-top: 7px;"><a href="clickhere.mp4" target="_blank"
+                                rel="noopener noreferrer">Showroom: 20 Đô Đốc Long, <br> P. Tân Quý, Q.Tân Phú, TP HCM.
+                            </a></li>
+                        <li><a href="clickhere.mp4" target="_blank" rel="noopener noreferrer">HOTLINE: 0915364692.</a></li>
+                        <a href="clickhere.mp4" target="_blank" rel="noopener noreferrer"></a>
+                        <img src="images/home/bct.png" alt="">
+                        <img src="images/home/dmca-website-logo-2022.png" alt="" style="padding-left: 3px;">
+                    </ul>
+                </div>
+                <div class="footer-box4-child">
+                    <h1>CHÍNH SÁCH VÀ HỖ TRỢ</h1>
+                    <ul>
+                        <li><a href="clickhere.mp4" target="_blank" rel="noopener noreferrer">Chính Sách Bảo Hành</a></li>
+                        <li><a href="clickhere.mp4" target="_blank" rel="noopener noreferrer">Chính Sách Chăm Sóc Khách Hàng</a>
+                        </li>
+                        <li><a href="clickhere.mp4" target="_blank" rel="noopener noreferrer">Hỗ Trợ Tư Vấn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box4-child" style="width: 20%;margin-left: 50px;">
+                    <h1>SẢN PHẨM</h1>
+                    <ul>
+                        <li><a href="clickhere.mp4" target="_blank" rel="noopener noreferrer">Bàn Phím Cơ</a></li>
+                        <li><a href="clickhere.mp4" target="_blank" rel="noopener noreferrer">Bàn Phím Akko</a></li>
+                        <li><a href="clickhere.mp4" target="_blank" rel="noopener noreferrer">Bàn Phím Royal Klude</a></li>
+                        <li><a href="clickhere.mp4" target="_blank" rel="noopener noreferrer">Keycap PBT</a></li>
+                        <li><a href="clickhere.mp4" target="_blank" rel="noopener noreferrer">Keycap ABS</a></li>
+                        <li><a href="clickhere.mp4" target="_blank" rel="noopener noreferrer">Switch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box4-child" style="text-align: center;">
+                    <h1>THEO DÕI CHÚNG TÔI</h1>
+                    <div class="medias">
+                        <a href="https://www.facebook.com/realconghuanUwU/" target="_blank"
+                            rel="noopener noreferrer"><img src="images/home/fb.png" alt="" srcset=""></a>
+                        <a href="https://www.facebook.com/realconghuanUwU/" target="_blank"
+                            rel="noopener noreferrer"><img src="images/home/messenger-512.webp" alt="" srcset=""></a>
+                        <a href="https://www.facebook.com/realconghuanUwU/" target="_blank"
+                            rel="noopener noreferrer"><img src="images/home/Icon_of_Zalo.svg.png" alt="" srcset=""></a>
+                        <a href="https://www.facebook.com/realconghuanUwU/" target="_blank"
+                            rel="noopener noreferrer"><img src="images/home/YouTube_social_red_circle_(2017).svg.png"
+                                alt="" srcset=""></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="js/javascript.js"></script>
+</body>
+
+</html>

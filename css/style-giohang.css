@@ -1,0 +1,85 @@
+.giohang{
+    width: 100%;
+    min-height: 240px;
+    background-color: white;
+    border-radius: 10px;
+    float:left;
+}
+.giohang table{
+    font-size: 20px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+}
+.giohang td{
+    border-top: 1px solid black;
+    text-align: center;
+}
+.giohangth{
+    text-align: center;
+    background-color: #dddddd;
+}
+.giohang img{
+    width: 130px;
+
+}
+/* thanh toan */
+.thanhtoan{
+    text-align: center;
+    margin-top: 50px;
+    width: 100%;
+    min-height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    float:left;
+}
+.thanhtoan h1{
+    margin-top: 15px;
+}
+.thanhtoan-thongtin{
+    width: calc( 70% - 10px);
+    height: 400px;
+    margin-right: 10px;
+    /* background-color: red; */
+    float:left;
+}
+.thanhtoan-donhang{
+    width: 30%;
+    height: 400px;
+    /* background-color: blue; */
+    float:left;
+}
+.thanhtoan input[type="text"] {
+    width: 750px;
+    margin: 10px;
+    height: 40px;
+    border: 1px solid black;
+}
+.thanhtoan input[type="button"] {
+    width: 150px;
+    margin-top: 20px;
+    background-color: red;
+    height: 45px;
+    font-weight: bold;
+    color:white;
+    border: none;
+    margin-bottom: 10px;
+}
+.thanhtoan input[type="button"]:hover {
+    width: 150px;
+    margin-top: 20px;
+    background-color: white;
+    font-weight: bold;
+    color:Red;
+    border: 1px solid red;
+    transition: 0.44s;
+    height: 45px;
+    margin-bottom: 10px;
+}
+table{
+    margin-top: 20px;
+}
+td {
+    /* border:1px solid black; */
+    text-align: justify;
+}

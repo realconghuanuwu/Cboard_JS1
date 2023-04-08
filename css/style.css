@@ -1,0 +1,619 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #f5f5fa;
+}
+.container{
+    width: 1100px;
+    margin: 0 auto;
+    /* height: 5000px;
+    background-color: aqua; */
+}
+.containerfull{
+    width: 100%;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.menu-fixed{
+    position: fixed;
+    z-index: 10;
+}
+/* ////////////////////////   MENU   //////////////////////// */
+.bgp{
+    background-color: #7e85bb;
+}
+header{
+    height: 70px;
+    width: 100%;
+    text-align: center;
+}
+.logo{
+    display: inline;
+    float:left;
+}
+.logo img{
+    height: 70px;
+    width: 170px;
+}
+.menucon{
+    padding-left:145px;
+    width: 500px;
+    /* background-color: red; */
+    float:left;
+}
+#giohang-count{
+    position: relative;
+    right: 30px;
+    top: 2px;
+}
+.luachon{
+    font-size: 32px;
+    color: white;
+    display: inline ;
+    line-height:70px ;
+    float:right;
+    margin-right: 20px;
+}
+.luachon > *{
+    margin-left: 30px;
+}
+.luachon > a{
+    color: white;
+}
+/* .luachon > a:hover{
+    margin-left: 30px;
+    color: black;
+    transition: 500ms;
+} */
+.menucon > ul >li{
+    line-height: 70px;
+    display: inline;
+    padding: 0 20px;
+}
+.menucon > ul{
+    margin-right: 120px;
+}
+.menucon a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+/* .menucon a:hover{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: 500ms;
+} */
+
+/* ////////////////////////   BANNER 1  //////////////////////// */
+.banner{
+    height: 600px;
+    background-color: red;
+    background: url(../images/home/banner/b1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+/* ////////////////////////   SẢN PHẨM BÁN CHẠY  //////////////////////// */
+.box4{
+    width: 100%;
+    height: 475px;
+    /* background-color: blue; */
+}
+.box4-child{
+    width: calc(25% - 20px);
+    margin: 0 10px;
+    height: 330px;
+    background-color: white;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    /* background-color: burlywood; */
+    text-align: center;
+    float:left;
+}
+.box4-child button{
+    margin: 10px 3px;
+    min-width: 65px;
+    height: 28px;
+    border-radius: 4px;
+    font-weight: 500;
+    background-color: #f5f5fa;
+    border: 1px solid black;
+}
+.box4-child button:hover{
+    margin: 10px 3px;
+    min-width: 65px;
+    height: 28px;
+    border-radius: 4px;
+    color:red;
+    font-weight: 500;
+    background-color: #f5f5fa;
+    border: 1px solid red;
+}
+.box4-child button i{
+    font-size: 18px;
+}
+/* .box4-child:hover{
+    width: calc(25% - 20px);
+    margin: 0 10px;
+    height: 330px;
+    box-shadow: #7e85bb 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    text-align: center;
+    transform: scale(1.03);
+    transition: 0.3s;
+    float:left;
+} */
+.box4-child-img-img{
+    width: 220px;
+    height: 100%; 
+    object-fit: cover
+}
+.w180px{
+    width: 180px;
+}
+.w200px{
+    width: 200px;
+}
+.box4-child-img{
+    width: 255px;
+    height: 180px;
+    /* background-color: blue; */
+    background-size: 100%;
+}
+.box4 h1{
+    color:#7e85bb;
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 50px;
+}
+/* .img1{
+    background-image: url(../images/home/item_ban_chay/ban-phim-co-akko-3068b-plus-world-tour-tokyo-r2-001-800x800.jpg);
+    background-position-y: -70px;
+}
+.img2{
+    background-image: url(../images/home/item_ban_chay/9c2b73af8e0b09d5bbe165235e9d6fda.jpg);
+    background-position-y: -22px;
+    background-position-x:35px ;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+.img3{
+    background-image: url(../images/home/item_ban_chay/milky\ yellơ.webp);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position-x:68px ;
+}
+.img4{
+    background-image: url(../images/home/item_ban_chay/rk\ h81.webp);
+    background-repeat: no-repeat;
+    background-size: 85%;
+    background-position-y:-40px ;
+    background-position-x:  25px;
+} */
+.box4-child-item_name{
+    padding-top:10px;
+    font-size: 19px;
+    font-weight: bold;
+}
+.box4-child-item_price{
+    padding-top:10px;
+    font-size: 18px;
+    font-weight: bold;
+    color:Red;
+}
+/* ////////////////////////   BÀN PHÍM  //////////////////////// */
+.mgt40{
+    margin-top:40px;
+}
+.arrow{
+    margin-bottom: 30px;
+}
+.arrow img{
+    width: 350px;
+    height: 85px;
+}
+.arrow span{
+    position: relative;
+    top:-32px;
+    left: -275px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+/* .img5{
+    background-image: url(../images/home/keyboard/ban-phim-co-akko-3084b-plus-world-tour-tokyo-r2-osa-01-247x296.jpg);
+    background-position-y:-75px;
+    background-position-x:15px;
+   
+    background-size: 90%;
+    background-repeat: no-repeat;
+    
+} */
+.img6{
+    background-image: url(../images/home/keyboard/ban-phim-co-akko-3068b-multi-modes-black-pink-ava3-247x296.jpg);
+    background-position-y:-90px;
+}
+.img7{
+    background-image: url(../images/home/keyboard/ban-phim-co-akko-5075b-plus-dragon-ball-super-goku-01-247x296.jpg);
+    background-position-y:-70px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position-x:15px;
+}
+.img8{
+    background-image: url(../images/home/keyboard/ban-phim-co-akko-3068b-plus-prunus-lannesiana-01-247x296.jpg);
+    background-position-y:-72px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position-x:15px;
+}
+/* ////////////////////////   KEYCAP PBT //////////////////////// */
+.img9{
+    background-image: url(../images/home/keycap/Milk-Keycaps-Milk-Cover-Keycap-PBT-Sublimation-Key-Cap-Cherry-Profile-140-Keys-Compatible-87-104.jpg_Q90.jpg_.webp);
+    background-position-y:-55px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position-x:15px;
+}
+.img11{
+    background-image: url(../images/home/keycap/1set-Game-keycap-PBT-Sublimation-Key-Cap-Cherry-Profile-Compatible-84-87-104-108-84-64.jpg);
+    background-position-y:-50px;
+    background-size: 90%;
+    transform: rotate(0.5deg);
+    background-repeat: no-repeat;
+    background-position-x:15px;
+}
+.img12{
+    background-image: url(../images/home/keycap/akko-asa-shine-through-keycap-set-white-05-711x800.jpg);
+    background-position-y:-75px;
+}
+/* ////////////////////////   SWITCH //////////////////////// */
+.img13{
+    background-image: url(../images/home/switch/20cdf33b32886386183f2ab7ebf49f9c.png_720x720q80.png_.jpg);
+    background-size: 75%;
+    background-position-y:-20px;
+    background-position-x:35px;
+    background-repeat: no-repeat;
+}
+.img14{
+    background-image: url(../images/home/switch/a811994863558f3ceb1a8ff634042350.jpg_720x720q80.jpg_.webp);
+    background-size: 75%;
+    background-position-y:-20px;
+    background-position-x:35px;
+    background-repeat: no-repeat;
+}
+.img15{
+    background-image: url(../images/home/switch/1b759e0bc3e903beec12bbdf853c6fb7.jpg_720x720q80.jpg_.webp);
+    background-size: 75%;
+    background-position-y:-20px;
+    background-position-x:35px;
+    background-repeat: no-repeat;
+}
+.img16{
+    background-image: url(../images/home/switch/1c6c4dd5aebbc7f41ad584ece2e1b215.jpg_720x720q80.jpg_.webp);
+    background-size: 75%;
+    background-position-y:-20px;
+    background-position-x:35px;
+    background-repeat: no-repeat;
+}
+/* ////////////////////////   BANNER 2 //////////////////////// */
+#banner2{
+    background-image: url(../images/home/banner/b4.jpg);
+}
+/* ////////////////////////   TIN TỨC //////////////////////// */
+.box3{
+    width: 100%;
+    text-align: center;
+    height: 460px;
+    /* background-color: blue; */
+}
+.box3 h1{
+    color:#7e85bb;
+    padding-bottom: 30px;
+    font-size: 32px;
+}
+.box3-child{
+    width: calc( 33.3333% - 30px );
+    height: 370px;
+    margin: 0 15px;
+    /* background-color: red; */
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    float:left;
+}
+.box3-child h2{
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+.box3-child p{
+    font-size: 15px;
+}
+.box3-child a:hover{
+    color:#5f669c;
+    transition: 300ms;
+}
+.box3-child-img{
+    height: 210px;
+    width: 100%;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#news1{
+    background-image: url(../images/home/news/ban-phim-keychron-cua-nuoc-nao-7.jpg);
+}
+#news2{
+    background-image: url(../images/home/news/ban-phim-keychron-cua-nuoc-nao-1.jpg);
+}
+#news3{
+    background-image: url(../images/home/news/DSC00181-300x200.png);
+}
+/* ////////////////////////   FOOTER //////////////////////// */
+footer{
+    height: 320px;
+    width: 100%;
+    float:left;
+}
+.bggr{
+    background-color: #313131;
+}
+.footer-box4{
+    width: 100%;
+}
+.footer-box4-child{
+    width: calc(25% - 10px);
+    height: 320px;
+    margin-right: 10px;
+    /* background-color: red; */
+    float:left;
+}
+.footer-box4-child h1{
+    font-size: 20px;
+    padding-bottom: 20px;
+    color:white;
+}
+.footer-box4-child > ul > li{
+    line-height: 40px;
+    color:white;
+    font-size: 14px;
+    font-weight: bold;
+    list-style: none;
+}
+.footer-box4-child img{
+    padding-top: 10px;
+    width: 150px;
+}
+.footer-box4-child a{
+    color:white;
+}
+.medias img{
+    padding-right: 13px;
+    width: 40px;
+}
+.duongdan{
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    float:left;
+    border-radius: 5px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+/* button */
+.button-red{
+    width: 170px;
+    height: 50px;
+    background-color: red;
+    font-size: 16px;
+    font-weight: bold;
+    color:white;
+    border: none;
+}
+.button-red:hover{
+    width: 170px;
+    transition: 0.55s;
+    height: 50px;
+    background-color: #f5f5fa;
+    color:RED;
+    border: 1px solid red;
+}
+
+.backgroundBlack{
+    background-color: black;
+    opacity: 0.7;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    position: fixed;
+    z-index: 11;
+    display: none;
+}
+/* form login */
+
+.banner-slider img{
+    width: 100%;
+    height: 600px;
+    float:left;
+}
+.banner-slider button{
+    width: 40px;
+    border:3px solid white;;
+    margin: 0 8px;
+}
+.banner-slider button:hover{
+    width: 40px;
+    border:3px solid #6e739c;
+    margin: 0 8px;
+}
+.banner-slide-button{
+    text-align: center;
+    position: relative;
+    bottom: 30px;
+    
+}
+#nextsld{
+    right: 0px;
+    position: absolute;
+    top:300px;
+    font-size: 30px;
+    background-color: unset;
+    border: none !important;
+    color: #3f4679;
+    display: none;
+}
+#prevsld{
+    left: 0px;
+    position: absolute;
+    background-color: unset;
+    top:300px;
+    font-size: 30px;
+    border: none !important;
+    color: #3f4679;
+    display: none;
+}
+.giohangmini{
+    position: absolute;
+    margin-left: 820px;
+    width: 450px;
+    top: 70px;
+    min-height: 60px;
+    background-color: white;
+    border-radius: 5px;
+    display: none;
+}
+.giohangmini table{
+    font-size: 15px;
+    width: 100%;
+    /* border-top: 1px solid black; */
+    border-left: 1px solid #9398c0;
+    border-right: 1px solid #9398c0;
+    border-bottom: 1px solid #9398c0;
+    border-collapse: collapse;
+}
+.giohangmini td{
+    /* border-top: 1px solid black; */
+    text-align: center;
+}
+.giohangmini th{
+    text-align: center;
+    padding: 0 10px;
+    background-color: #9398c0;
+    color: white;
+}
+.giohangmini img{
+    width: 60px;
+}
+.giohangmini a{
+    margin-left: 10px;
+    float: left;
+    font-size: 20px;
+    color:red;
+    font-weight: 600;
+}
+/* .giohangmini a:hover{
+    float: left;
+    transform: scale(1.05);
+    color:Red;
+    font-weight: 600;
+} */
+.xoa{  
+    position: relative;
+    bottom: 1px;
+    background-color:unset;
+    font-size: 17px;
+    border: none;
+}
+.xoa:hover{  
+    position: relative;
+    bottom: 2px;
+    background-color:unset;
+    border: none;
+    font-size: 19px;
+    
+}
+#xoaall{
+    border: none;
+    background-color:unset;
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    float: right;
+    color:red;
+}
+#xoaall:hover{
+    border: none;
+    background-color:unset;
+    width: 80px;
+    height: 30px;
+    font-size: 17px;
+    font-weight: 500;
+    float: right;
+    color:red;
+}
+.alerror{
+    width: 350px;
+    min-height: 20px;
+    /* background-color: blue; */
+    position: relative;
+    text-align: justify;
+    color:red;
+    left: 175px;
+    display: none;
+    
+}
+#thanhtoanthanhcong{
+    position: absolute;
+    width: 1100px;
+    height: 428px;
+    background-color: white;
+    border: 1px solid green;
+    display: none;
+}
+#thanhtoanthanhcong img{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 140px;
+}
+#thanhtoanthanhcong button{
+    /* width: 140px;
+    height: 40px; */
+    margin-top: 70px;
+    padding: 10px;
+    background-color: #7e85bb;
+    border-radius: 8px;
+    border: 1px solid #7e85bb;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+#thanhtoanthanhcong button:hover{
+    /* width: 140px;
+    height: 40px; */
+    padding: 10px;
+    margin-top: 70px;
+    background-color: white;
+    transition: 700ms;
+    border-radius: 8px;
+    border: 1px solid #7e85bb;
+    color: #7e85bb;
+    font-size: 20px;
+    font-weight: bold;
+}
+#thanhtoanthanhcong h1{
+    font-size: 25px;
+}
+input[name="luachon"] {
+    position: relative;
+    top: 2px;
+    margin-right: 8px;
+}
+
+.trHover:hover{
+    border: 2px solid red;
+}
